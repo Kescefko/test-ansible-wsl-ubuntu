@@ -1,0 +1,9 @@
+---
+- name: Install htop on Azure VM
+  hosts: azure_vm
+  become: yes
+  tasks:
+    - name: Install htop
+      apt:
+        name: htop
+        state: present
